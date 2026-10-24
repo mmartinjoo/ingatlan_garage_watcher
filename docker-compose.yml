@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: garage_watcher
+      POSTGRES_PASSWORD: garage_watcher
+      POSTGRES_DB: garage_watcher
+    ports:
+      - "5434:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./docker/initdb:/docker-entrypoint-initdb.d
+
+volumes:
+  pgdata:

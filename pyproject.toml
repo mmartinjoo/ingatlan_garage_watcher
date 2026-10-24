@@ -1,0 +1,29 @@
+[project]
+name = "garage-watcher"
+version = "0.1.0"
+description = "Daily scraper for ingatlan.com garage-for-rent listings in Szombathely, stored in Postgres"
+authors = [
+    { name = "martinjoo", email = "martin@martinjoo.dev" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "beautifulsoup4>=4.15.0",
+    "psycopg[binary]>=3.3.6",
+    "requests>=2.34.2",
+    "tzdata>=2026.5",
+]
+
+[project.scripts]
+garage-watcher = "garage_watcher.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.12.1,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
+
+[tool.vercel]
+entrypoint = "api.scrape:handler"
