@@ -2,6 +2,10 @@
 
 Date: 2026-10-24. Status: approved by owner on 2026-10-24.
 
+> **Change 2026-10-24 (owner):** the job runs **weekly** (cron `0 4 * * 1`, Mondays) instead of daily, and
+> `days_listed` is the plain `last_seen_date - first_seen_date` (migration 003), no `+1`. Mentions of
+> "daily" below are historical; the code itself has no cadence assumption.
+
 ## 1. Intent
 
 A small daily tracker for "garage for rent in Szombathely" on ingatlan.com. It records which ads are on the

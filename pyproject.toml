@@ -1,7 +1,7 @@
 [project]
 name = "garage-watcher"
 version = "0.1.0"
-description = "Daily scraper for ingatlan.com garage-for-rent listings in Szombathely, stored in Postgres"
+description = "Weekly scraper for ingatlan.com garage-for-rent listings in Szombathely, stored in Postgres"
 authors = [
     { name = "martinjoo", email = "martin@martinjoo.dev" }
 ]

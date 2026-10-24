@@ -1,5 +1,5 @@
 {
-  "crons": [{ "path": "/api/scrape", "schedule": "0 4 * * *" }],
+  "crons": [{ "path": "/api/scrape", "schedule": "0 4 * * 1" }],
   "regions": ["fra1"],
   "functions": { "api/scrape.py": { "maxDuration": 300 } }
 }
